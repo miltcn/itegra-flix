@@ -1,0 +1,46 @@
+.card-container {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid red;
+    width: 300px;
+}
+
+.card-image img{
+    border-radius: 8px;
+}
+
+.card-container > p {
+    color: #e7e4e4;
+    margin: 8px 0;
+    font-size: 14px;
+}
+
+.info-movie {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.info-movie p {
+    color: #919191;
+}
+
+.star-container {
+    display: flex; 
+    align-items: center;
+}
+
+.star-container p {
+    color: #fb8200;
+    margin-left: 4px;
+}
+
+.heart-container {
+    display: flex;
+    align-items: flex-end;
+}
+
+.heart-container p {
+    margin-left: 4px;
+}
+
