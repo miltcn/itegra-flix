@@ -1,16 +1,14 @@
 import './assets/styles/custom.scss';
 import './App.css';
 import Navbar from 'components/Navbar';
-import Card from 'components/Card';
+import MainPage from 'pages/MainPage';
 
 
 const App = () => {
   return (
     <>
       <Navbar />
-      <div>
-        <Card />
-      </div>
+      <MainPage />
     </>
   );
 }

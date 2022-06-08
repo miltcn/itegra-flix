@@ -1,0 +1,21 @@
+h5 {
+    color: #e7e4e4;
+    font-size: 28px;
+    font-weight: 400;
+    margin: 22px 0 22px 93px;
+}
+
+.mainpage-cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 93px;
+}
+
+.item-container {
+    width: 200px;
+    margin-bottom: 30px;
+}
+
+.item-container:not(:nth-child(5n)){
+    margin-right: 40px;
+}
