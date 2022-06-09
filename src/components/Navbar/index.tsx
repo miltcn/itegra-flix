@@ -1,5 +1,5 @@
 import Mascote from '../../assets/images/wally.png';
-import './style.css';
+import './styles.css';
 
 const Navbar = () => {
   return (

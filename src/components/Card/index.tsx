@@ -2,7 +2,7 @@ import CardImage from '../../assets/images/cardimage.jpg';
 import StarImage from '../../assets/images/star.png';
 import HeartImage from '../../assets/images/heart.png';
 
-import './style.css';
+import './styles.css';
 
 const Card = () => {
     return (

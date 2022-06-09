@@ -1,6 +1,6 @@
 
 import Card from 'components/Card';
-import './style.css';
+import './styles.css';
 
 const MainPage = () => {
     return (
