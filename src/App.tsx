@@ -1,4 +1,3 @@
-import './assets/styles/custom.scss';
 import './App.css';
 import Navbar from 'components/Navbar';
 import MainPage from 'pages/MainPage';

@@ -16,17 +16,22 @@
 
 .info-movie {
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     justify-content: space-between;
 }
 
 .info-movie p {
+    padding-top: 3px;
     color: #919191;
 }
 
 .star-container {
-    display: flex; 
-    align-items: center;
+    display: flex;     
+}
+
+.star-image {
+    display: flex;
+    align-content: flex-end;
 }
 
 .star-container p {
@@ -36,7 +41,11 @@
 
 .heart-container {
     display: flex;
-    align-items: flex-end;
+}
+
+.heart-image {
+    display: flex;
+    align-content: flex-end;
 }
 
 .heart-container p {
