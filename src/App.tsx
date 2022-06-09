@@ -1,13 +1,13 @@
 import './App.css';
 import Navbar from 'components/Navbar';
-import DetailsPage from 'pages/DetailsPage';
+import MainPage from 'pages/MainPage';
 
 
 const App = () => {
   return (
     <>
       <Navbar />
-      <DetailsPage />
+      <MainPage />
     </>
   );
 }

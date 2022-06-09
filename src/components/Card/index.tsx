@@ -4,14 +4,23 @@ import HeartImage from '../../assets/images/heart.svg';
 
 import './styles.css';
 
-const Card = () => {
+export interface Filme {
+  id: number;
+  poster_path: string;
+  title: string;
+  vote_average: number;
+  release_date: string;
+  vote_count: number;
+}
+
+const Card = ({poster_path, title, vote_average, release_date, vote_count}: Filme) => {
     return (
       <div className="card-container">
           <div className="card-image">
-            <img src={CardImage} alt='' />
+            <img src={`https://image.tmdb.org/t/p/w500${poster_path}`} alt='' />
           </div>
           <p>
-            Título do filme
+            {title}
           </p>
           <div className="info-movie">
             <div className="star-container">
@@ -19,18 +28,18 @@ const Card = () => {
                 <img src={StarImage} alt='' />
               </div>
               <p>
-                8.2
+                {vote_average}
               </p>
             </div>
             <p>
-              2021
+              {release_date.slice(0,4)}
             </p>
             <div className="heart-container">
               <div className="heart-image">
                 <img src={HeartImage} alt='' />
               </div>
               <p>
-                15000
+                {vote_count}
               </p>
             </div>
           </div>
