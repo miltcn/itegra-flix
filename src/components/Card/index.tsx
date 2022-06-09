@@ -1,6 +1,6 @@
 import CardImage from '../../assets/images/cardimage.jpg';
-import StarImage from '../../assets/images/star.png';
-import HeartImage from '../../assets/images/heart.png';
+import StarImage from '../../assets/images/star.svg';
+import HeartImage from '../../assets/images/heart.svg';
 
 import './styles.css';
 

@@ -1,5 +1,5 @@
 nav {
-    height: 100px;
+    height: 80px;
     width: 100%;
     border-bottom: 1px solid #FB8200;
 }
@@ -9,41 +9,34 @@ nav {
     flex-direction: row;
     align-items: center;
     height: 100%;
-    margin-left: 93px;
+    margin-left: 40px;
 }
 
 .navbar-image {
-    width: 54px;
+    width: 44px;
     margin-right: 12px;
 }
 
 h4 {
-    font-size: 36px;
+    font-size: 26px;
 }
 
 @media (min-width: 576px){
-  nav {
-      height: 80px;
-  }
-
-  .navbar-container {
-      margin-left: 63px;
-  }
-
-  .navbar-image {
-      width: 44px;
-      margin-right: 12px;
-  }
-
   h4 {
-      font-size: 26px;
+      font-size: 30px;
+  }
+}
+
+@media (min-width: 768px) {
+  .navbar-container {
+    margin-left: 60px;
   }
 }
 
 @media (min-width: 992px) {
   .navbar-container {
-    margin-left: 83px;
-}
+    margin-left: 60px;
+  }
 }
 
 @media (min-width: 1200px) {
@@ -52,7 +45,7 @@ h4 {
   }
 
   .navbar-container {
-    margin-left: 83px;
+    margin-left: 90px;
   }
 
   .navbar-image {
