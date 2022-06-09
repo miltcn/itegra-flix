@@ -1,0 +1,82 @@
+.details-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.details-container > p {
+    font-size: 28px;
+    color: #E7E4E4;
+    font-weight: 700;
+    margin: 24px 0 24px 94px;
+}
+
+.details-items {
+    display: flex;
+    margin: 0 94px;
+}
+
+.details-item-image {
+    margin-right: 60px;
+    min-width: 300px;
+}
+
+.details-item-infos {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.item-infos-movie {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 18px;
+}
+
+.scores {
+    display: flex;
+    margin-bottom: 18px;
+}
+
+.score-stars {
+    display: flex;
+    align-items: center;
+}
+
+.score-stars p{
+  font-size: 16px;
+  color: #FB8200;
+  margin-right: 17px;
+  margin-left: 8px;
+}
+
+.score-hearts{
+    display: flex;
+    align-items: center;
+}
+
+.score-hearts p{
+  font-size: 16px;
+  color: #919191;
+  margin-left: 8px;
+}
+
+.descriptions p{
+  margin-bottom: 14px;
+  font-size: 16px;
+  color: #919191;
+}
+
+.descriptions p:last-child {
+  font-size: 18px;
+  color: #E7E4E4;
+}
+
+.artists {
+    display: flex;
+    width: 60%;
+    height: 40wh;
+}
+
+.artists > div{
+  margin-right: 20px;
+}

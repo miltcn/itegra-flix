@@ -1,13 +1,13 @@
 import './App.css';
 import Navbar from 'components/Navbar';
-import Artist from 'components/Artist';
+import DetailsPage from 'pages/DetailsPage';
 
 
 const App = () => {
   return (
     <>
       <Navbar />
-      <Artist />
+      <DetailsPage />
     </>
   );
 }
