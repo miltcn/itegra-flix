@@ -6,23 +6,25 @@ import { MainArtist } from 'interfaces/MainArtist';
 import { Genero } from 'interfaces/Genero';
 import Heart from '../../assets/images/heart.svg';
 import Star from '../../assets/images/star.svg';
-import './styles.css';
 import axios from 'axios';
 import { API_KEY, BASE_URL, BASE_URL_IMAGE } from 'utils/request';
-
+import { TailSpin } from 'react-loader-spinner';
+import './styles.css';
 
 type UrlParams = {
 	filmeId: string;
 };
 
 const DetailsPage = () => {
-	
-	const {filmeId}  = useParams<UrlParams>();
-	const [ detalheFilme, setDetalheFilme ] = useState<DetalheFilme>();
-	const [ mainArtists, setMainArtists ] = useState<MainArtist[]>();
-	const [ generos, setGeneros ] = useState<Genero[]>();
+
+	const { filmeId } = useParams<UrlParams>();
+	const [detalheFilme, setDetalheFilme] = useState<DetalheFilme>();
+	const [mainArtists, setMainArtists] = useState<MainArtist[]>();
+	const [generos, setGeneros] = useState<Genero[]>();
+	const [isLoading, setIsLoading] = useState(false);
 
 	useEffect(() => {
+		setIsLoading(true);
 		axios
 			.get(
 				`${BASE_URL}/${filmeId}?api_key=${API_KEY}&language=pt-BR`
@@ -37,59 +39,73 @@ const DetailsPage = () => {
 			)
 			.then((response) => {
 				setMainArtists(response.data.cast.slice(0, 3));
-			});
+			})
+			.finally(() => {
+				setIsLoading(false);
+			})
 	}, [filmeId]);
 
 	return (
 		<div className="details-container">
-			<p>{detalheFilme?.title}</p>
-			<div className="details-items">
-				<div className="details-item-image">
-					<img src={`${BASE_URL_IMAGE}/${detalheFilme?.poster_path}`} alt="" />
-				</div>
-				<div className="details-item-infos">
-					<div className="item-infos-movie">
-						<div className="scores">
-							<div className="score-stars">
-								<div className="score-star-image">
-									<img src={Star} alt="" />
-								</div>
-								<p>{detalheFilme?.vote_average}</p>
-							</div>
-							<div className="score-hearts">
-								<div className="score-heart-image">
-									<img src={Heart} alt="" />
-								</div>
-								<p>{detalheFilme?.vote_count}</p>
-							</div>
-						</div>
-						<div className="descriptions">
-							<p>	
-							{`Gêneros: ${generos?.map((genero) => genero.name).join(", ")}`}	
-							</p>
-							<p>
-								{`Produtoras: ${detalheFilme?.production_companies.map((produtora) => produtora.name).join(", ")}`}
-							</p>
-							<p>
-								{
-									detalheFilme &&
-										(detalheFilme.overview.length <= 300 ? 
-										detalheFilme.overview : 
-										detalheFilme.overview.substring(0,300).trim() + '...')
-								}
-							</p>
-						</div>
+			{
+				isLoading ? (
+					<div className="loading">
+						<TailSpin color="#FB8200" height={80} width={80} />
 					</div>
-					<div className="artists">
-						{
-							mainArtists &&
-							mainArtists.map((mainArtist) => (
-								<Artist {...mainArtist} key={mainArtist.id}/>
-							))
-						}
-					</div>
-				</div>
-			</div>
+				) :
+					(
+						<>
+							<p>{detalheFilme?.title}</p>
+							<div className="details-items">
+								<div className="details-item-image">
+									<img src={`${BASE_URL_IMAGE}/${detalheFilme?.poster_path}`} alt="" />
+								</div>
+								<div className="details-item-infos">
+									<div className="item-infos-movie">
+										<div className="scores">
+											<div className="score-stars">
+												<div className="score-star-image">
+													<img src={Star} alt="" />
+												</div>
+												<p>{detalheFilme?.vote_average}</p>
+											</div>
+											<div className="score-hearts">
+												<div className="score-heart-image">
+													<img src={Heart} alt="" />
+												</div>
+												<p>{detalheFilme?.vote_count}</p>
+											</div>
+										</div>
+										<div className="descriptions">
+											<p>
+												{`Gêneros: ${generos?.map((genero) => genero.name).join(", ")}`}
+											</p>
+											<p>
+												{`Produtoras: ${detalheFilme?.production_companies.map((produtora) => produtora.name).join(", ")}`}
+											</p>
+											<p>
+												{
+													detalheFilme &&
+													(detalheFilme.overview.length <= 300 ?
+														detalheFilme.overview :
+														detalheFilme.overview.substring(0, 300).trim() + '...')
+												}
+											</p>
+										</div>
+									</div>
+									<div className="artists">
+										{
+											mainArtists &&
+											mainArtists.map((mainArtist) => (
+												<Artist {...mainArtist} key={mainArtist.id} />
+											))
+										}
+									</div>
+								</div>
+							</div>
+						</>
+					)
+			}
 		</div>
 	);
 }
