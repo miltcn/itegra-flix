@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import Mascote from '../../assets/images/wally.png';
 import './styles.css';
 
@@ -6,13 +7,13 @@ const Navbar = () => {
     <nav className="bg-primary">
       <div className="navbar-container">
         <div className="navbar-image">
-          <a href="link">
+          <Link to="/">
             <img src={Mascote} alt="Mascote da Itegra" />
-          </a>
+          </Link>
         </div>
-        <a href="link">
+        <Link to="/">
           <h4>ITEGRAFLIX</h4>
-        </a>
+        </Link>
       </div>
     </nav>
   );            

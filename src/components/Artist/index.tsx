@@ -1,14 +1,16 @@
-import ArtistImage from '../../assets/images/artistimage.jpg';
+import { MainArtist } from 'interfaces/MainArtist';
+import { BASE_URL_IMAGE } from 'utils/request';
+
 import './styles.css';
 
-const Artist = () => {
+const Artist = ({name, profile_path}:MainArtist) => {
     return (
       <div className="artist-container">
         <div className="artist-image-container">
-          <img src={ArtistImage} alt="" />
+          <img src={`${BASE_URL_IMAGE}${profile_path}`} alt="" />
         </div>
         <p>
-          Nome do artista
+          {name}
         </p>
       </div>
     );

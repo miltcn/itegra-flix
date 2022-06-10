@@ -1,16 +1,51 @@
 import Artist from 'components/Artist';
-import CardImage from '../../assets/images/cardimage.jpg';
+import { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
+import { DetalheFilme } from 'interfaces/DetalheFilme';
+import { MainArtist } from 'interfaces/MainArtist';
+import { Genero } from 'interfaces/Genero';
 import Heart from '../../assets/images/heart.svg';
 import Star from '../../assets/images/star.svg';
 import './styles.css';
+import axios from 'axios';
+import { API_KEY, BASE_URL, BASE_URL_IMAGE } from 'utils/request';
+
+
+type UrlParams = {
+	filmeId: string;
+};
 
 const DetailsPage = () => {
+	
+	const {filmeId}  = useParams<UrlParams>();
+	const [ detalheFilme, setDetalheFilme ] = useState<DetalheFilme>();
+	const [ mainArtists, setMainArtists ] = useState<MainArtist[]>();
+	const [ generos, setGeneros ] = useState<Genero[]>();
+
+	useEffect(() => {
+		axios
+			.get(
+				`${BASE_URL}/${filmeId}?api_key=${API_KEY}&language=pt-BR`
+			)
+			.then((response) => {
+				setDetalheFilme(response.data);
+				setGeneros(response.data.genres);
+			});
+		axios
+			.get(
+				`${BASE_URL}/${filmeId}/credits?api_key=${API_KEY}&language=pt-BR`
+			)
+			.then((response) => {
+				setMainArtists(response.data.cast.slice(0, 3));
+			});
+	}, [filmeId]);
+
 	return (
 		<div className="details-container">
-			<p>Título do filme</p>
+			<p>{detalheFilme?.title}</p>
 			<div className="details-items">
 				<div className="details-item-image">
-					<img src={CardImage} alt="" />
+					<img src={`${BASE_URL_IMAGE}/${detalheFilme?.poster_path}`} alt="" />
 				</div>
 				<div className="details-item-infos">
 					<div className="item-infos-movie">
@@ -19,29 +54,39 @@ const DetailsPage = () => {
 								<div className="score-star-image">
 									<img src={Star} alt="" />
 								</div>
-								<p>9.0</p>
+								<p>{detalheFilme?.vote_average}</p>
 							</div>
 							<div className="score-hearts">
 								<div className="score-heart-image">
 									<img src={Heart} alt="" />
 								</div>
-								<p>10300</p>
+								<p>{detalheFilme?.vote_count}</p>
 							</div>
 						</div>
 						<div className="descriptions">
-							<p>Gêneros: Ação, Avendura, Ficção</p>
-							<p>Produtoras: Marvel Studios, Pascal Pictures, Columbia Pictures</p>
+							<p>	
+							{`Gêneros: ${generos?.map((genero) => genero.name).join(", ")}`}	
+							</p>
 							<p>
-							Ciente de que o feiticeiro das trevas Gellert Grindelwald se move nas 
-							sombras para assumir o controle do mundo bruxo, Alvo Dumbledore confia 
-							no magizoologista Newt Scamander para liderar a sua equipe numa missão.
+								{`Produtoras: ${detalheFilme?.production_companies.map((produtora) => produtora.name).join(", ")}`}
+							</p>
+							<p>
+								{
+									detalheFilme &&
+										(detalheFilme.overview.length <= 300 ? 
+										detalheFilme.overview : 
+										detalheFilme.overview.substring(0,300).trim() + '...')
+								}
 							</p>
 						</div>
 					</div>
 					<div className="artists">
-						<Artist />
-						<Artist />
-						<Artist />
+						{
+							mainArtists &&
+							mainArtists.map((mainArtist) => (
+								<Artist {...mainArtist} key={mainArtist.id}/>
+							))
+						}
 					</div>
 				</div>
 			</div>
