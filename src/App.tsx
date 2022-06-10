@@ -12,7 +12,7 @@ const App = () => {
     <BrowserRouter>
       <Navbar />
       <Routes>
-        <Route path="/" element={<MainPage />} />
+        <Route path="/itegra-flix/" element={<MainPage />} />
         <Route path="/move-details">
           <Route path=":filmeId" element={<DetailsPage />} />
         </Route>
