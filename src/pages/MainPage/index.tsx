@@ -3,7 +3,7 @@ import Card from 'components/Card';
 import { Filme } from 'interfaces/Filme';
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { API_KEY, BASE_URL } from 'utils/request';
+import { BASE_URL } from 'utils/request';
 import { TailSpin } from  'react-loader-spinner';
 import './styles.css';
 
@@ -16,7 +16,7 @@ const MainPage = () => {
     setIsLoading(true);
     axios
         .get(
-            `${BASE_URL}/popular?api_key=${API_KEY}&language=pt-BR&page=1`
+            `${BASE_URL}/popular?api_key=${process.env.REACT_APP_API}&language=pt-BR&page=1`
         )
         .then((response) => {
             setFilmes(response.data.results.slice(0, 10));

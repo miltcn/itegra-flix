@@ -7,7 +7,7 @@ import { Genero } from 'interfaces/Genero';
 import Heart from '../../assets/images/heart.svg';
 import Star from '../../assets/images/star.svg';
 import axios from 'axios';
-import { API_KEY, BASE_URL, BASE_URL_IMAGE } from 'utils/request';
+import { BASE_URL, BASE_URL_IMAGE } from 'utils/request';
 import { TailSpin } from 'react-loader-spinner';
 import './styles.css';
 
@@ -27,7 +27,7 @@ const DetailsPage = () => {
 		setIsLoading(true);
 		axios
 			.get(
-				`${BASE_URL}/${filmeId}?api_key=${API_KEY}&language=pt-BR`
+				`${BASE_URL}/${filmeId}?api_key=${process.env.REACT_APP_API}&language=pt-BR`
 			)
 			.then((response) => {
 				setDetalheFilme(response.data);
@@ -35,7 +35,7 @@ const DetailsPage = () => {
 			});
 		axios
 			.get(
-				`${BASE_URL}/${filmeId}/credits?api_key=${API_KEY}&language=pt-BR`
+				`${BASE_URL}/${filmeId}/credits?api_key=${process.env.REACT_APP_API}&language=pt-BR`
 			)
 			.then((response) => {
 				setMainArtists(response.data.cast.slice(0, 3));

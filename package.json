@@ -2,6 +2,7 @@
   "name": "itegra-flix",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://miltcn.github.io/itegra-flix",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.3.0",
@@ -45,6 +46,7 @@
     ]
   },
   "devDependencies": {
-    "@types/react-router-dom": "^5.3.3"
+    "@types/react-router-dom": "^5.3.3",
+    "gh-pages": "^4.0.0"
   }
 }
