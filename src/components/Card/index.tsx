@@ -9,7 +9,7 @@ const Card = ({poster_path, title, vote_average, release_date, vote_count}: Film
     return (
       <div className="card-container">
           <div className="card-image">
-            <img src={`${BASE_URL_IMAGE}${poster_path}`} alt='' />
+            <img src={`https://image.tmdb.org/t/p/w500${poster_path}`} alt='' />
           </div>
           <p>
             {title}

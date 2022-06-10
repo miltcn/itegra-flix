@@ -27,7 +27,7 @@ const DetailsPage = () => {
 		setIsLoading(true);
 		axios
 			.get(
-				`${BASE_URL}/${filmeId}?api_key=6e0eaa7e7cb48216d74a48f5859118d0&language=pt-BR`
+				`https://api.themoviedb.org/3/movie/${filmeId}?api_key=6e0eaa7e7cb48216d74a48f5859118d0&language=pt-BR`
 			)
 			.then((response) => {
 				setDetalheFilme(response.data);
@@ -35,7 +35,7 @@ const DetailsPage = () => {
 			});
 		axios
 			.get(
-				`${BASE_URL}/${filmeId}/credits?api_key=6e0eaa7e7cb48216d74a48f5859118d0&language=pt-BR`
+				`https://api.themoviedb.org/3/movie/${filmeId}/credits?api_key=6e0eaa7e7cb48216d74a48f5859118d0&language=pt-BR`
 			)
 			.then((response) => {
 				setMainArtists(response.data.cast.slice(0, 3));
