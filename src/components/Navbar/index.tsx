@@ -7,11 +7,11 @@ const Navbar = () => {
     <nav className="bg-primary">
       <div className="navbar-container">
         <div className="navbar-image">
-          <Link to="/">
+          <Link to="/itegra-flix/">
             <img src={Mascote} alt="Mascote da Itegra" />
           </Link>
         </div>
-        <Link to="/">
+        <Link to="/itegra-flix/">
           <h4>ITEGRAFLIX</h4>
         </Link>
       </div>

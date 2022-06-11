@@ -16,7 +16,7 @@ const MainPage = () => {
     setIsLoading(true);
     axios
         .get(
-            `https://api.themoviedb.org/3/movie/popular?api_key=6e0eaa7e7cb48216d74a48f5859118d0&language=pt-BR&page=1`
+            `${BASE_URL}/popular?api_key=${process.env.REACT_APP_API_KEY}&language=pt-BR&page=1`
         )
         .then((response) => {
             setFilmes(response.data.results.slice(0, 10));

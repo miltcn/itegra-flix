@@ -27,7 +27,7 @@ const DetailsPage = () => {
 		setIsLoading(true);
 		axios
 			.get(
-				`https://api.themoviedb.org/3/movie/${filmeId}?api_key=6e0eaa7e7cb48216d74a48f5859118d0&language=pt-BR`
+				`${BASE_URL}/${filmeId}?api_key=${process.env.REACT_APP_API_KEY}&language=pt-BR`
 			)
 			.then((response) => {
 				setDetalheFilme(response.data);
@@ -35,7 +35,7 @@ const DetailsPage = () => {
 			});
 		axios
 			.get(
-				`https://api.themoviedb.org/3/movie/${filmeId}/credits?api_key=6e0eaa7e7cb48216d74a48f5859118d0&language=pt-BR`
+				`${BASE_URL}/${filmeId}/credits?api_key=${process.env.REACT_APP_API_KEY}&language=pt-BR`
 			)
 			.then((response) => {
 				setMainArtists(response.data.cast.slice(0, 3));
@@ -58,7 +58,9 @@ const DetailsPage = () => {
 							<p>{detalheFilme?.title}</p>
 							<div className="details-items">
 								<div className="details-item-image">
-									<img src={`${BASE_URL_IMAGE}/${detalheFilme?.poster_path}`} alt="" />
+									{	detalheFilme &&
+										<img src={`${BASE_URL_IMAGE}/${detalheFilme.poster_path}`} alt="" />
+									}
 								</div>
 								<div className="details-item-infos">
 									<div className="item-infos-movie">
