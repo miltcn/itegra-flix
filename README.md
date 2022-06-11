@@ -1,46 +1,67 @@
-# Getting Started with Create React App
+[ITEGRAFLIX](https://miltcn.github.io/itegra-flix/)
+--
+Aplicação React que lista os 10 filmes mais populares do momento com base nos dados fornecidos pelo o  [TMBD](https://www.themoviedb.org/).
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<p align="center"> 
+<img src="https://img.shields.io/badge/progress-finished-lightgrey" alt="Progresso da aplicação" />
+<img src="https://img.shields.io/github/repo-size/miltcn/itegra-flix" alt="Tamanho do repositório" />
+<img src="https://img.shields.io/github/languages/count/miltcn/itegra-flix?color=%2349B856" alt="Linguanges utilizadas" />
+<img src="https://img.shields.io/github/last-commit/miltcn/itegra-flix?color=%23F3DB2E" alt="Último commit" />
+<img src="https://img.shields.io/github/issues/miltcn/itegra-flix?color=%239A97CC" alt="Issues" />
+</p>
+<p align="center">
+<a href="#Desmonstração">Demonstração</a> | <a href="#Tecnologias">Tecnologias </a> | <a href="#Instalação">Instalação</a> 
+</p>
 
-## Available Scripts
+## :computer: Demonstração da aplicação
 
-In the project directory, you can run:
+### Demo do design responsivo
+<p>A responsividade foi desenvolvida com base nos breakpoints do <a href="https://getbootstrap.com/docs/5.0/layout/breakpoints/">Bootstrap v5.0.</a></p>
 
-### `npm start`
+![Telas](./telas.jpg)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Link da aplicação 
+🔗 https://miltcn.github.io/itegra-flix/
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🛠️ Tecnologias utilizadas
+|  **Tecnologia**| **Versão** |
+|:------------------ | ------------------|
+|[npm](https://docs.npmjs.com/) |18.1.0|
+|[React](https://reactjs.org/) |18.1.0|
+| [TypeScript](https://www.typescriptlang.org/) | 4.7.3 | 
+| [Axios](https://github.com/axios/axios) | 0.27.2 | 
+| [React Router Dom](https://github.com/ReactTraining/react-router/tree/master/packages/react-router-dom) | 6.3.0 | 
+| [React Loader Spinner](https://www.npmjs.com/package/react-loader-spinner) | 5.1.5 | 
+[Gh-pages](https://www.npmjs.com/package/gh-pages) | 4.0.0 | 
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+##  🚀 Instalação
+### Pré-requisitos
+Para executar este projeto é necessário ter previamente instalado em sua máquina as seguintes ferramentas: [Git](https://git-scm.com/), [Node.js](https://nodejs.org/en/) e um editor código como [VSCode](https://code.visualstudio.com/).
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+> A aplicação consome a API do TMDB. Obtenha uma key de acesso seguindo as orientações da documentação. 
+> 
+> [Documentação da API do TMDB](https://developers.themoviedb.org/4/getting-started)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Como executar
 
-### `npm run eject`
+```bash
+# Clone este repositório
+$ git clone https://github.com/miltcn/itegra-flix.git
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+# Instale as dependências (pelo terminal/cmd)
+$ npm install
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+# Acesse a pasta do projeto com VSCode e crie um arquivo chamado .env na raiz
+# do projeto, depois insira a seguinte linha:
+ REACT_APP_API_KEY="sua api key"
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+# Execute a aplicação (pelo terminal/cmd)
+$ npm run start
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+# A aplicação será aberta na porta:3000 
+- Acesse por http://localhost:3000
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+```
