@@ -7,10 +7,10 @@
 }
 
 h5 {
-    color: #e7e4e4;
-    font-size: 24px;
-    font-weight: 400;
-    margin: 22px 0 22px 40px;
+  color: #e7e4e4;
+  font-size: 24px;
+  font-weight: 400;
+  margin: 22px 0 22px 40px;
 }
 
 .mainpage-cards-container {
@@ -21,11 +21,11 @@ h5 {
   margin-bottom: 40px;
 }
 
-@media (min-width: 576px){
+@media (min-width: 576px) {
   h5 {
     margin-left: 60px;
   }
-  
+
   .mainpage-cards-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -60,4 +60,3 @@ h5 {
     margin: 0 100px;
   }
 }
-

@@ -11,7 +11,7 @@
   flex-direction: column;
 }
 
-.details-container > p {
+.details-container>p {
   font-size: 22px;
   color: #E7E4E4;
   font-weight: 700;
@@ -49,25 +49,25 @@
   align-items: center;
 }
 
-.score-stars p{
+.score-stars p {
   font-size: 16px;
   color: #FB8200;
   margin-right: 17px;
   margin-left: 8px;
 }
 
-.score-hearts{
+.score-hearts {
   display: flex;
   align-items: center;
 }
 
-.score-hearts p{
+.score-hearts p {
   font-size: 16px;
   color: #919191;
   margin-left: 8px;
 }
 
-.descriptions p{
+.descriptions p {
   margin-bottom: 14px;
   font-size: 16px;
   color: #919191;
@@ -84,13 +84,13 @@
   height: 40wh;
 }
 
-.artists > div:not(:last-child){
+.artists>div:not(:last-child) {
   margin-right: 20px;
 }
 
 
-@media (min-width: 576px){
-  .details-container > p {
+@media (min-width: 576px) {
+  .details-container>p {
     margin: 24px 0 24px 40px;
   }
 
@@ -110,7 +110,7 @@
     flex-direction: column;
     margin-left: 70px;
   }
-  
+
   .details-items {
     display: flex;
     margin: 0 30px;
@@ -127,7 +127,7 @@
     height: 40wh;
   }
 
-  .artists > div{
+  .artists>div {
     margin-right: 20px;
   }
 }
@@ -138,7 +138,7 @@
     flex-direction: column;
   }
 
-  .details-container > p {
+  .details-container>p {
     font-size: 28px;
     color: #E7E4E4;
     font-weight: 700;
@@ -177,25 +177,25 @@
     align-items: center;
   }
 
-  .score-stars p{
+  .score-stars p {
     font-size: 16px;
     color: #FB8200;
     margin-right: 17px;
     margin-left: 8px;
   }
 
-  .score-hearts{
+  .score-hearts {
     display: flex;
     align-items: center;
   }
 
-  .score-hearts p{
+  .score-hearts p {
     font-size: 16px;
     color: #919191;
     margin-left: 8px;
   }
 
-  .descriptions p{
+  .descriptions p {
     margin-bottom: 14px;
     font-size: 16px;
     color: #919191;
@@ -212,10 +212,9 @@
     height: 40wh;
   }
 
-  .artists > div{
+  .artists>div {
     margin-right: 20px;
   }
 }
 
-@media (min-width: 1400px) {
-}
+@media (min-width: 1400px) {}

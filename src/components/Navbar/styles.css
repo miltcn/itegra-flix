@@ -1,35 +1,35 @@
 nav {
-    height: 90px;
-    width: 100%;
-    border-bottom: 1px solid #FB8200;
+  height: 90px;
+  width: 100%;
+  border-bottom: 1px solid #FB8200;
 }
 
 .navbar-container {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    height: 100%;
-    margin-left: 40px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 100%;
+  margin-left: 40px;
 }
 
 .navbar-image {
-    width: 44px;
-    margin-right: 12px;
+  width: 44px;
+  margin-right: 12px;
 }
 
 h4 {
-    font-size: 26px;
-    color: #FB8200;
+  font-size: 26px;
+  color: #FB8200;
 
 }
 
-@media (min-width: 576px){
+@media (min-width: 576px) {
   .navbar-container {
     margin-left: 60px;
   }
 
   h4 {
-      font-size: 30px;
+    font-size: 30px;
   }
 }
 
@@ -46,7 +46,7 @@ h4 {
     width: 54px;
     margin-right: 12px;
   }
-  
+
   h4 {
     font-size: 36px;
   }

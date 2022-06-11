@@ -5,40 +5,40 @@ import { BASE_URL_IMAGE } from 'utils/request';
 
 import './styles.css';
 
-const Card = ({poster_path, title, vote_average, release_date, vote_count}: Filme) => {
-    return (
-      <div className="card-container">
-          <div className="card-image">
-            { poster_path &&
-              <img src={`${BASE_URL_IMAGE}/${poster_path}`} alt='' />
-            }
+const Card = ({ poster_path, title, vote_average, release_date, vote_count }: Filme) => {
+  return (
+    <div className="card-container">
+      <div className="card-image">
+        {poster_path &&
+          <img src={`${BASE_URL_IMAGE}/${poster_path}`} alt="Imagem de capa do filme" />
+        }
+      </div>
+      <p>
+        {title}
+      </p>
+      <div className="info-movie">
+        <div className="star-container">
+          <div className="star-image">
+            <img src={StarImage} alt="Figurinha de uma estrela" />
           </div>
           <p>
-            {title}
+            {vote_average}
           </p>
-          <div className="info-movie">
-            <div className="star-container">
-              <div className="star-image">
-                <img src={StarImage} alt='' />
-              </div>
-              <p>
-                {vote_average}
-              </p>
-            </div>
-            <p>
-              {release_date.slice(0,4)}
-            </p>
-            <div className="heart-container">
-              <div className="heart-image">
-                <img src={HeartImage} alt='' />
-              </div>
-              <p>
-                {vote_count}
-              </p>
-            </div>
+        </div>
+        <p>
+          {release_date.slice(0, 4)}
+        </p>
+        <div className="heart-container">
+          <div className="heart-image">
+            <img src={HeartImage} alt="Figurinha de um coração" />
           </div>
+          <p>
+            {vote_count}
+          </p>
+        </div>
       </div>
-    );
+    </div>
+  );
 }
 
 export default Card;

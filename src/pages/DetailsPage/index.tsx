@@ -58,8 +58,8 @@ const DetailsPage = () => {
 							<p>{detalheFilme?.title}</p>
 							<div className="details-items">
 								<div className="details-item-image">
-									{	detalheFilme &&
-										<img src={`${BASE_URL_IMAGE}/${detalheFilme.poster_path}`} alt="" />
+									{detalheFilme &&
+										<img src={`${BASE_URL_IMAGE}/${detalheFilme.poster_path}`} alt="Imagem de capa do filme" />
 									}
 								</div>
 								<div className="details-item-infos">
@@ -67,13 +67,13 @@ const DetailsPage = () => {
 										<div className="scores">
 											<div className="score-stars">
 												<div className="score-star-image">
-													<img src={Star} alt="" />
+													<img src={Star} alt="Figurinha de uma estrela" />
 												</div>
 												<p>{detalheFilme?.vote_average}</p>
 											</div>
 											<div className="score-hearts">
 												<div className="score-heart-image">
-													<img src={Heart} alt="" />
+													<img src={Heart} alt="Figurinha de um coração" />
 												</div>
 												<p>{detalheFilme?.vote_count}</p>
 											</div>
