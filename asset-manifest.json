@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/itegra-flix/static/css/main.6182106a.css",
-    "main.js": "/itegra-flix/static/js/main.2e37baaa.js",
+    "main.css": "/itegra-flix/static/css/main.cee33343.css",
+    "main.js": "/itegra-flix/static/js/main.85ad58b8.js",
     "index.html": "/itegra-flix/index.html",
     "static/media/star.svg": "/itegra-flix/static/media/star.7fc1bc1693e8cf3123fbddd7eee143cd.svg",
     "static/media/heart.svg": "/itegra-flix/static/media/heart.f8ffa3312f762c160db4b10128ec9024.svg",
-    "main.6182106a.css.map": "/itegra-flix/static/css/main.6182106a.css.map",
-    "main.2e37baaa.js.map": "/itegra-flix/static/js/main.2e37baaa.js.map"
+    "main.cee33343.css.map": "/itegra-flix/static/css/main.cee33343.css.map",
+    "main.85ad58b8.js.map": "/itegra-flix/static/js/main.85ad58b8.js.map"
   },
   "entrypoints": [
-    "static/css/main.6182106a.css",
-    "static/js/main.2e37baaa.js"
+    "static/css/main.cee33343.css",
+    "static/js/main.85ad58b8.js"
   ]
 }
