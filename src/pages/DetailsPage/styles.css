@@ -27,6 +27,10 @@
   min-width: 100px;
 }
 
+.details-item-image img {
+  border-radius: 7px;
+}
+
 .details-item-infos {
   display: flex;
   flex-direction: column;
@@ -136,18 +140,19 @@
   .details-container {
     display: flex;
     flex-direction: column;
+    margin: 0 200px 0 102px;
   }
 
   .details-container>p {
     font-size: 28px;
     color: #E7E4E4;
     font-weight: 700;
-    margin: 24px 0 24px 94px;
+    margin: 22px 0 22px 0;
   }
 
   .details-items {
     display: flex;
-    margin: 0 94px;
+    margin: 0;
   }
 
   .details-item-image {
@@ -216,5 +221,3 @@
     margin-right: 20px;
   }
 }
-
-@media (min-width: 1400px) {}
