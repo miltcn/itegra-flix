@@ -62,7 +62,7 @@ $ npm install
 # Execute a aplicação (pelo terminal/cmd)
 $ npm run start
 
-# A aplicação será aberta na porta:3000 
-- Acesse por http://localhost:3000
+# A aplicação será aberta na porta:3000 (a rota da página principal é /itegra-flix) 
+- Acesse a aplicação por http://localhost:3000/itegra-flix
 
 ```
