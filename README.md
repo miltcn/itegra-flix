@@ -10,9 +10,10 @@ Aplicação React que lista os 10 filmes mais populares do momento com base nos 
 <img src="https://img.shields.io/github/issues/miltcn/itegra-flix?color=%239A97CC" alt="Issues" />
 </p>
 <p align="center">
-<a href="#Desmonstração">Demonstração</a> | <a href="#Tecnologias">Tecnologias </a> | <a href="#Instalação">Instalação</a> 
+<a href="#demo">Demonstração</a> | <a href="#tec">Tecnologias </a> | <a href="#inst">Instalação</a> 
 </p>
 
+<a id="demo"></a>
 ## :computer: Demonstração da aplicação
 
 ### Demo do design responsivo
@@ -24,7 +25,7 @@ Aplicação React que lista os 10 filmes mais populares do momento com base nos 
 🔗 https://miltcn.github.io/itegra-flix/
 
 
-
+<a id="tec"></a>
 ## 🛠️ Tecnologias utilizadas
 |  **Tecnologia**| **Versão** |
 |:------------------ | ------------------|
@@ -36,10 +37,10 @@ Aplicação React que lista os 10 filmes mais populares do momento com base nos 
 | [React Loader Spinner](https://www.npmjs.com/package/react-loader-spinner) | 5.1.5 | 
 [Gh-pages](https://www.npmjs.com/package/gh-pages) | 4.0.0 | 
 
-
+<a id="inst"></a>
 ##  🚀 Instalação
 ### Pré-requisitos
-Para executar este projeto é necessário ter previamente instalado em sua máquina as seguintes ferramentas: [Git](https://git-scm.com/), [Node.js](https://nodejs.org/en/) e um editor código como [VSCode](https://code.visualstudio.com/).
+Para executar este projeto é necessário ter previamente instalado em sua máquina as seguintes ferramentas: [Git](https://git-scm.com/), [Node.js](https://nodejs.org/en/) v16 e um editor código como [VSCode](https://code.visualstudio.com/).
 
 > A aplicação consome a API do TMDB. Obtenha uma key de acesso seguindo as orientações da documentação. 
 > 
